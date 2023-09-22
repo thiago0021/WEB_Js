@@ -1,0 +1,219 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+
+.contenedor{
+    display: grid;
+    max-width: 1000px;
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "header header header header"
+                        "contenido contenido contenido aside"
+                        "form form bloque  aside"
+                        "footer footer footer footer";
+}
+
+.contenedor > div{
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.header{
+    text-align: center;
+    grid-area: header;
+    background-color: #fd7c04;
+}
+
+.contenido{
+    text-align: center;
+    justify-content: center;
+    grid-area: contenido;
+    background-color: #f8f23b;
+    font-size: 20px;
+}
+
+.formulario{
+    grid-area: form;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /*************************************/
+    background-image: url(img/bosque.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 500px;
+}
+
+
+h2{
+    padding: 10px;
+}
+
+.bloque{
+    padding: 10px;
+    grid-area: bloque;
+    background-color: #fffc9d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#btnClose{
+    border-style: ridge;
+    border-color: gray;
+    background-color: red;
+    padding: 3px;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient( rgb(255, 1, 1), rgb(248, 128, 128));
+}
+
+.window{
+    border-style: solid;
+    border-color: rgb(34, 33, 33);
+    border-width: 8px;
+    padding: 8px;
+    visibility: hidden;
+    background: linear-gradient( gray, black);
+}
+
+.x{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.js{
+   color: orange; 
+}
+
+img{
+    width: 180px;
+    /*padding: 8px;*/
+    margin: 5px;
+    border-style: solid;
+}
+
+.animeGirl{
+    border-color: #fa5c00;
+    pointer-events: none;
+}
+
+h4{
+    text-align: center;
+}
+
+.btnCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.boton{
+    padding: 8px;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+    border-width: 5px;
+    font-size: 20px;
+    color: white;
+    background: linear-gradient(rgb(224, 255, 45), rgb(236, 185, 44));
+    margin-left: 60px;
+}
+
+.aside{
+    text-align: center;
+    grid-area: aside;
+    background-color: #8b2610;
+}
+
+h5{
+    font-size: 25px;
+    color: azure;
+    margin: 10px;
+}
+
+
+.HTML{
+    font-size: 15px;
+    margin: 20px;
+}
+
+.CSS{
+    font-size: 15px;
+    margin: 20px;
+}
+
+.Vue{
+    font-size: 15px;
+    margin: 20px;
+}
+
+em{
+    font-size: 20px;
+}
+
+.gitHub{
+    border: none;
+    pointer-events: none;
+}
+
+
+.footer{
+    text-align: center;
+    grid-area: footer;
+    background-color: #be391b;
+}
+
+input{
+    border: none;
+    border-radius: 8px;
+    
+}
+
+textarea{
+    border: none;
+    border-radius: 8px;
+}
+
+.meme{
+    pointer-events: none;
+}
+
+nav a{
+    display: inline-block;
+    text-decoration: none;
+    color: azure;
+    margin: 0 30px;
+    padding: 5px;
+}
+
+
+@media screen and (max-width: 768px){
+    .contenedor{
+        grid-template-areas: "header header header header"
+                            "contenido contenido contenido contenido"
+                            "form form form form"
+                            "bloque bloque bloque bloque"
+                            "aside aside aside aside"
+                            "footer footer footer footer";
+    }
+}
